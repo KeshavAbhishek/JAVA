@@ -1,9 +1,37 @@
+// Student class definition
+class Student {
+    // Instance variables
+    String name;
+    int age;
+    double grade;
+
+    // Constructor to initialize the student object
+    public Student(String name, int age, double grade) {
+        this.name = name;
+        this.age = age;
+        this.grade = grade;
+    }
+
+    // Method to display student details
+    public void displayDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Grade: " + grade);
+        System.out.println();
+    }
+}
+
+// Main class
 public class studentDetails {
     public static void main(String[] args) {
-        long regNumber = 2201020582l;
-        String name = "KESHAV ABHISHEK";
-        int group = 6;
-        float cgpa = 8.5f;
-        System.out.print("Name : " + name + "\nRegistration Number : " + regNumber + "\nGroup : " + group + "\nCGPA : " + cgpa);
+        System.out.println("Student Details:\n");
+
+        // Creating student objects
+        Student student1 = new Student("Keshav", 20, 85.5);
+        Student student2 = new Student("Ankit", 22, 92.0);
+
+        // Displaying student details
+        student1.displayDetails();
+        student2.displayDetails();
     }
 }
