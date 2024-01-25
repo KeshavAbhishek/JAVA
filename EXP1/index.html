@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body{
+            width: 100dvw;
+            min-height: 100dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        #video{
+            display: block;
+            width: 70vw;
+            aspect-ratio: (16/9);
+        }
+    </style>
+</head>
+<body>
+    <input type="file" name="file" id="file" oninput="play()" accept=".mp4,.mkv">
+    <br>
+    <video src="" id="video" controls></video>
+    <script defer>
+        function play(){
+            var videoLink = URL.createObjectURL(document.getElementById("file").files[0]);
+            document.getElementById("video").src=videoLink;
+        }
+    </script>
+</body>
+</html>

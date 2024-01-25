@@ -60,3 +60,9 @@ i{
     transform: rotateX(90deg);
     transition: transform 0.5s ease;
 }
+
+@media screen and (max-width: 700px) {
+    .code{
+        font-size: 1rem !important;
+    }
+}

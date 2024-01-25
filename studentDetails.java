@@ -6,10 +6,10 @@ class Student {
     double grade;
 
     // Constructor to initialize the student object
-    public Student(String name, int age, double grade) {
-        this.name = name;
-        this.age = age;
-        this.grade = grade;
+    public Student(String n, int a, double g) {
+        name = n;
+        age = a;
+        grade = g;
     }
 
     // Method to display student details
@@ -27,6 +27,7 @@ public class studentDetails {
         System.out.println("Student Details:\n");
 
         // Creating student objects
+        // Edit these names
         Student student1 = new Student("Keshav", 20, 85.5);
         Student student2 = new Student("Ankit", 22, 92.0);
 
