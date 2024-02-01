@@ -6,8 +6,7 @@ public class FindMaxMin {
             if(min > data[i]){
                 min = data[i];
             }
-
-            if(max < data[i]){
+            else{
                 max = data[i];
             }
         }
