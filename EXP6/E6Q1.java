@@ -1,22 +1,33 @@
 import java.util.Scanner;
 
-class Box{
-    int depth, length, breadth, km;
-    float costperkm;
+interface BoxTravelCost{
+    void kmenter();
+    void kmprice();
+}
+
+class Box implements BoxTravelCost{
+    int depth = 0, length = 0, breadth = 0, km = 0;
+    float costperkm = 0.0f;
     Scanner sc = new Scanner(System.in);
+
+    public void kmenter(){
+        System.out.println();
+        System.out.print("Enter km to travel : ");
+        km = sc.nextInt();
+    }
+    public void kmprice(){
+        System.out.println();
+        System.out.print("Enter per km price : ");
+        costperkm = sc.nextFloat();
+    }
+
     Box(){
         System.out.print("Enter depth, length and breadth : ");
         depth = sc.nextInt();
         length = sc.nextInt();
         breadth = sc.nextInt();
-
-        System.out.println();
-        System.out.print("Enter km to travel : ");
-        km = sc.nextInt();
-
-        System.out.println();
-        System.out.print("Enter per km price : ");
-        costperkm = sc.nextFloat();
+        kmenter();
+        kmprice();
     }
 }
 

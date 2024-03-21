@@ -1,21 +1,31 @@
 import java.util.Scanner;
 
-class E6Q2{
-    void mul(int a, int b){
+interface MUL{
+    public void mul(int a, int b);
+    public void mul(int a, int b, int c);
+    public void mul(int[] values, int nItem);
+}
+
+class multiplication implements MUL{
+    public void mul(int a, int b){
         System.out.println("Method for Two numbers called- (Result) - " + a*b);
     }
 
-    void mul(int a, int b, int c){
+    public void mul(int a, int b, int c){
         System.out.println("Method for Three numbers called- (Result) - " + a*b*c);
     }
 
-    void mul(int[] values, int nItem){
+    public void mul(int[] values, int nItem){
         int a = 1;
         for(int i = 0; i<nItem; i++){
             a = a*values[i];
         }
         System.out.println("Method for Multiple numbers called- (Result) - " + a);
     }
+}
+
+class E6Q2{
+    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         boolean t = true;
@@ -38,7 +48,7 @@ class E6Q2{
             }
         }
 
-        E6Q2 user = new E6Q2();
+        multiplication user = new multiplication();
         if(nItem == 2){
             user.mul(values[0], values[1]);
         }

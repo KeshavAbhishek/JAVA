@@ -23,8 +23,6 @@ class Toyota implements Car{
     public void running(){
         System.out.println("Toyota is running.");
     }
-
-
 }
 
 public class E6Q4 {

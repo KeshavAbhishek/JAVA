@@ -1,27 +1,40 @@
-class Shape {
+interface ShapeInterface{
+    double findArea();
+}
+
+interface SquareInterface{
+    public void square(double side);
+    public double findArea();
+}
+
+interface RectangleInterface{
+    public void rectangle(double length, double width);
+    public double findArea();
+}
+
+class Shape implements ShapeInterface{
     public double findArea() {
         return 0; // Default implementation, overridden by subclasses
     }
 }
 
-class Square extends Shape {
+class Square implements SquareInterface{
     private double side;
 
-    public Square(double side) {
+    public void square(double side) {
         this.side = side;
     }
 
-    @Override
     public double findArea() {
         return side * side;
     }
 }
 
-class Rectangle extends Shape {
+class Rectangle implements RectangleInterface {
     private double length;
     private double width;
 
-    public Rectangle(double length, double width) {
+    public void rectangle(double length, double width) {
         this.length = length;
         this.width = width;
     }
@@ -34,8 +47,10 @@ class Rectangle extends Shape {
 
 public class E6Q3 {
     public static void main(String[] args) {
-        Square square = new Square(5);
-        Rectangle rectangle = new Rectangle(4, 6);
+        Square square = new Square();
+        square.square(5);
+        Rectangle rectangle = new Rectangle();
+        rectangle.rectangle(4, 6);
 
         System.out.println("Area of square: " + square.findArea());
         System.out.println("Area of rectangle: " + rectangle.findArea());
