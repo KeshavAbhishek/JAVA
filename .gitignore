@@ -1,2 +1,7 @@
 *.class
 *.idea
+*.js
+*.json
+*.iml
+*.md
+*.jpg
